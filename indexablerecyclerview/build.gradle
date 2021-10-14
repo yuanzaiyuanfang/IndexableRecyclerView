@@ -1,20 +1,27 @@
 apply plugin: 'com.android.library'
 
+//apply plugin: 'maven-publish'
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.yuanzaiyuanfang'
+
+
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
 
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 24
+        minSdkVersion 21
+        targetSdkVersion 30
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
     }
 }
 
 dependencies {
-    compile 'com.github.promeg:tinypinyin:2.0.3'
-    compile 'com.github.promeg:tinypinyin-lexicons-android-cncity:2.0.3'
-    provided 'com.android.support:appcompat-v7:25.3.1'
-    provided 'com.android.support:recyclerview-v7:25.3.1'
+//    api 'com.github.promeg:tinypinyin:2.0.3'
+//    api 'com.github.promeg:tinypinyin-lexicons-android-cncity:2.0.3'
+    api 'io.github.biezhi:TinyPinyin:2.0.3.RELEASE'
+
+    api 'androidx.appcompat:appcompat:1.0.0'
+    api 'androidx.recyclerview:recyclerview:1.0.0'
 }
